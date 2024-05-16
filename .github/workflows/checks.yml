@@ -13,11 +13,6 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USER }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-          ecr: auto
-          logout: true
-
-      - name: Set environment variable
-        run: echo "MY_ENV_VAR=some_value" >> $GITHUB_ENV
 
       - name: Checkout
         uses: actions/checkout@v2
